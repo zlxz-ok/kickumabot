@@ -16,9 +16,28 @@ def click(x,y):
     #if pyautogui.pixel(1385,340) [0] == 129:
         #click(1385,340)
         #X: 1385 Y:  340 RGB: (129, 229, 125)
+w_press = False
+inico = None
+holaactive = False
 while True:
     if keyboard.is_pressed("q"):
        break
+    try:
+       p = pyautogui.locateOnScreen("botsini/hola.png",confidence=0.8) != None
+    except pyautogui.ImageNotFoundException:
+       p = False
+    if p:
+       if w_press:
+          keyboard.release("w")
+          w_press = False
+       if not holaactive:
+         keyboard.press("s")
+         time.sleep(1.5)
+         keyboard.release("s")
+         win32api.mouse_event(win32con.MOUSEEVENTF_MOVE,961,813,0,0)
+         holaactive = True
+    else:
+       holaactive = False
     try:
      if pyautogui.locateOnScreen("botsini/kick.png",confidence=0.8) != None:
        win32api.mouse_event(win32con.MOUSEEVENTF_MOVE,961,813,0,0)
@@ -27,5 +46,16 @@ while True:
         pass
     except pyautogui.ImageNotFoundException:
        if pyautogui.pixel(1385,340) [0] == 129:
+           if w_press:
+              keyboard.release("w")
+              w_press = False
            click(1385,340)
-       time.sleep(0.5)
+           if inico is None:
+            inico = time.time()
+    if inico is not None and time.time() - inico >= 21:
+              if not w_press:
+                 keyboard.press("w")
+                 w_press = True
+              inico = None
+    
+    time.sleep(0.5)
