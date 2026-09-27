@@ -5,6 +5,7 @@ import time
 import keyboard
 import random
 import win32api, win32con
+from InquirerPy import inquirer
 #RGB DEL VERDE RGB:(129, 229, 125)
 #POSICION DE LA BARRA:X: 1385 Y:  340 
 def click(x,y):
@@ -16,10 +17,11 @@ def click(x,y):
     #if pyautogui.pixel(1385,340) [0] == 129:
         #click(1385,340)
         #X: 1385 Y:  340 RGB: (129, 229, 125)
-w_press = False
-inico = None
-holaactive = False
-while True:
+def bot(timee):
+ w_press = False
+ inico = None
+ holaactive = False
+ while True:
     if keyboard.is_pressed("q"):
        break
     try:
@@ -52,10 +54,25 @@ while True:
            click(1385,340)
            if inico is None:
             inico = time.time()
-    if inico is not None and time.time() - inico >= 21:
+    if inico is not None and time.time() - inico >= timee:
               if not w_press:
                  keyboard.press("w")
                  w_press = True
               inico = None
     
     time.sleep(0.5)
+menu = inquirer.select(
+   message="Select an option",
+   choices=[
+      "Kickumabot",
+      "None"
+   ]
+).execute()
+if menu == "Kickumabot":
+   ask = float(inquirer.number(
+      message="Time:",
+      float_allowed="True"
+   ).execute())
+   bot(ask)
+elif menu == "None":
+   print("Bruh")
