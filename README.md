@@ -35,6 +35,8 @@ I recommend testing the bot for at least 5 runs before leaving it running unatte
 The timer may need to be adjusted depending on your power and how long it takes your character to reach the floor.
 ## Disclaimer
 This project is not affiliated with, endorsed by, or officially connected to Roblox or 30 Dollar Games, the creators of Kick an Uma.
+## Game Rules Notice
+Please note that the use of macros or automation tools may not be permitted under the rules of Roblox or the game. Use this project at your own risk and make sure to check the current game rules before using it.
 
 ## Libraries
 
