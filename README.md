@@ -1,6 +1,6 @@
 # Kick uma bot
 This is a Bot or Script that automates the game of roblox "Kick an Uma" by 30 dollar games
-
+PRESS Q TO STOP THE BOT!
 ## Features
 - Automatic launch system
 - Configurable timer
