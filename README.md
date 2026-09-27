@@ -27,12 +27,14 @@ The executable will ask you how long does it take to start the "run" the time st
 i recommend to test a few times, for example i have 400M of power, and i use 21 seconds,which works well for me.
 
 ## Notes
-
 The bot relies on image recognition, so changes to the game's interface may affect its functionality.
 Make sure Roblox remains visible while the bot is running.
 The bot may not work correctly if the game resolution or interface changes.
 I recommend testing the bot for at least 5 runs before leaving it running unattended.
 The timer may need to be adjusted depending on your power and how long it takes your character to reach the floor.
+## Contact
+Have a suggestion, found a bug, or need help with the bot?
+Discord: zlxz__
 ## Disclaimer
 This project is not affiliated with, endorsed by, or officially connected to Roblox or 30 Dollar Games, the creators of Kick an Uma.
 ## Game Rules Notice
