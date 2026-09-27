@@ -17,13 +17,15 @@ def click(x,y):
         #click(1385,340)
         #X: 1385 Y:  340 RGB: (129, 229, 125)
 while True:
+    if keyboard.is_pressed("q"):
+       break
     try:
+     if pyautogui.locateOnScreen("botsini/kick.png",confidence=0.8) != None:
+       win32api.mouse_event(win32con.MOUSEEVENTF_MOVE,961,813,0,0)
+       click(961,813)
      if pyautogui.locateOnScreen("botsini/hola.png",confidence=0.8) != None:
         pass
     except pyautogui.ImageNotFoundException:
-       if keyboard.is_pressed("q"):
-          break
        if pyautogui.pixel(1385,340) [0] == 129:
            click(1385,340)
-           keyboard.press("w")
        time.sleep(0.5)
